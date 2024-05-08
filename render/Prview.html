@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Landing Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      /* Position relative pour que l'image puisse être positionnée absolument par rapport à elle */
+    }
+    .titTopN h1{
+        color: #ffffff;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 20px;
+    }
+    .logo {
+      width: 15%;
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+    }
+    .menu button {
+      margin-right: 20px;
+    }
+    .arrow {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+    .title {
+      font-size: 24px;
+    }
+    .footer {
+      background-color:#16263C;
+      padding: 20px;
+      
+      align-items: center;
+    }
+    .email-input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+      width: 300px;
+      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .subscribe-btn {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .subscribe-btn1{
+      background-color: transparent;
+      color: #E45D31;
+      border: none;
+
+    }
+    .checkboxes {
+      margin-right: 20px;
+      margin-top: 10px;
+      font-size: smaller;
+    }
+    .checkboxes label {
+      margin-right: 10px;
+    }
+    .icon img{
+      width: 20px;
+      margin-right: 10px;
+    }
+    
+    .phone-image {
+      display: block;
+      align-items: right;
+      max-width: 45%;
+      margin-top: 50px;
+      margin-left: auto;
+    }
+    
+    .prec {
+      display: flex;
+      align-items: center;
+      margin-left: 50px;
+      margin-top: 20px;
+    }
+      
+  
+    .ar {
+      margin-right: 20px;
+      
+    }
+    .contenu{
+        margin-left: 15%;
+        margin-top: 20px;
+        
+    }
+    .ar img{
+        width: 30px;
+    }
+    .menu-button img{
+        width: 30px;
+    }
+    .etl{
+        color: red;
+    }
+    .subscribe-btn {
+      padding: 10px 20px;
+      background-color: #E45D31;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .signup-btn {
+      padding: 10px 20px;
+      background-color: transparent; /* Retirer le fond */
+      border: none; /* Retirer le contour */
+      font-size: 18px; /* Agrandir la police */
+      cursor: pointer;
+      color: #E45D31;
+    }
+    .freq{
+    font-size: 18px;
+      display: flex; /* Utiliser Flexbox */
+      align-items: center;
+    }
+    .phone-image {
+      position: absolute; /* Position absolue */
+      top: 20px; /* 20px depuis le haut */
+      right: 20px; /* 20px depuis la droite */
+    }
+    /* Media query pour les petits écrans */
+    @media only screen and (max-width: 1000px) {
+      .phone-image {
+        position: static; /* Retirer la position absolue */
+        max-width: 100%; /* Taille maximale de l'image */
+      height: auto;
+      }
+      .signup-btn{
+        max-width: 3em;
+      }
+    }
+    .desc{
+        max-width: 650px;
+        margin-left: 50px;
+
+    }
+    .colored{
+        color: #E45D31;
+    }
+    .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+  margin-left: 9px;
+}
+.checkboxing label{
+    color: #ffffff;
+}
+.button {
+      padding: 10px 20px;
+      background-color: #E45D31;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .button i {
+      margin-right: 5px;
+    }
+    .menu-container {
+  position: relative;
+}
+
+.menu-button {
+  cursor: pointer;
+}
+
+.menu-items {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 250px; /* Ajustez la largeur ici selon votre préférence */
+}
+
+.menu-items ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-items ul li {
+  margin-bottom: 5px;
+}
+
+.menu-items ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.menu-items ul li a:hover {
+  color: #E45D31;
+}
+
+.menu-items input[type="text"] {
+  width: 80%;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+.search-container {
+  position: relative;
+}
+
+.search-button {
+  position: absolute;
+  right: 5px;
+  top: 60%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.search-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  color: #777; /* Couleur de l'icône */
+  pointer-events: none; /* Pour éviter les interactions de clic avec l'icône */
+}
+.search-container button:hover{
+  background-color: #E45D31;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.search-container {
+        display: flex;
+        align-items: center;
+        width: 100%; /* Ajustez la largeur selon vos besoins */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+.search-container input[type="text"] {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        outline: none;
+    }
+.search-container button {
+        background-color: #f2f2f2;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        background-color: transparent;
+    }
+
+    .popup-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+      z-index: 9999;
+    }
+    .popup-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      width: 30%;
+      max-width: 600px; /* Largeur maximale */
+      border-radius: 15px;
+    }
+    .popup-image {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+
+    }
+
+    .email-input2 {
+      width: calc(100% - 100px); /* Largeur du champ de saisie moins la largeur du bouton */
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .subscribe-btn {
+      width: 100px; /* Largeur du bouton */
+      padding: 10px;
+      background-color: #E45D31;
+      color: #ffffff;
+      border: none;
+      margin-top: 10px;
+      
+      
+    }
+    .checkboxes {
+      margin-top: 10px;
+      font-size: smaller;
+    }
+    .checkboxes label {
+      margin-right: 10px;
+    }
+    .popup-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+.prev{
+  position: absolute; /* Positionnement absolu par rapport à son conteneur le plus proche positionné */
+    top: 60px; /* En haut de la page */
+    right: 0; /* À droite de la page */
+}
+    
+
+    /* Media query pour les écrans de taille moyenne et plus petits */
+@media only screen and (max-width: 1000px) {
+  .logo {
+    width: 30%; /* Réduire la largeur du logo */
+  }
+  .prec{
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      margin:auto;
+
+  }
+  .desc{
+   
+      text-align: center;
+      margin: auto
+  }
+  .menu-button img {
+    width: 20px; /* Réduire la taille de l'icône du menu */
+  }
+  .subscribe-btn,
+  .signup-btn {
+    padding: 8px 16px; /* Ajuster le rembourrage des boutons */
+    font-size: 14px; /* Réduire la taille de la police des boutons */
+  }
+}
+
+/* Media query pour les écrans plus petits */
+@media only screen and (max-width: 790px) {
+  .header {
+    display: flex; /* Afficher les éléments de l'en-tête l'un en dessous de l'autre */
+    align-items: center; /* Centrer les éléments de l'en-tête */
+    gap: 10px;
+  }
+ 
+  .logo {
+    width: 30%; /* Réduire davantage la largeur du logo */
+    align-items: center; /* Ajouter un espacement sous le logo */
+  }
+  .menu {
+    margin-bottom: auto; /* Ajouter un espacement sous le menu */
+  }
+  .menu button {
+    margin-right: 10px; /* Réduire l'espacement entre les éléments du menu */
+  }
+  .subscribe-btn,
+  .signup-btn {
+    width: auto; /* Ajuster la largeur des boutons à 100% */
+    margin-bottom: 10px; /* Ajouter un espacement entre les boutons */
+  }
+  .btnHead{
+    flex-direction: column;
+  }
+  .email-input {
+    width: calc(80% - 20px); /* Ajuster la largeur de l'entrée email */
+    margin-right: 0; /* Réinitialiser la marge droite */
+  }
+}
+
+/* Media query pour les écrans plus grands */
+@media only screen and (min-width: 1030px) {
+  .header {
+    padding: 20px 40px; /* Augmenter le rembourrage de l'en-tête */
+  }
+  .menu button {
+    margin-right: 30px; /* Augmenter l'espacement entre les éléments du menu */
+  }
+  .phone-image {
+    position: absolute; /* Position absolue */
+      top: 20px; /* 20px depuis le haut */
+      right: 0px; /* 20px depuis la droite */
+     left: 100%;
+  }
+}
+  /* Styles pour les écrans d'ordinateur */
+.desktop {
+    display: block; /* Affiché par défaut */
+}
+
+.mobile {
+    display: none; /* Masqué par défaut */
+}
+
+/* Media query pour les écrans de tablette et mobile */
+@media (max-width: 768px) {
+    .desktop {
+        display: none; /* Masqué sur les petits écrans */
+    }
+
+    .mobile{
+        display: block; /* Affiché sur les petits écrans */
+    }
+}
+/* Media query pour les écrans de tablette et mobile */
+@media (max-width: 1024px) { /* Ajusté pour inclure les tablettes */
+  .desktop{
+        display: none; /* Masqué sur les petits écrans */
+    }
+
+    .mobile {
+        display: block; /* Affiché sur les petits écrans */
+    }
+}
+  </style>
+</head>
+<body>
+   
+    <div class="header">
+        <div class="menu-container">
+  <div class="menu-button"  onmouseenter="showMenu()" onmouseleave="hideMenu()">
+    <img src="icon/menu.png" alt="Menu">
+  </div>
+  <div class="menu-items" id="menuItems" onmouseenter="showMenu()" onmouseleave="hideMenu()">
+    <form>
+      <div class="search-container">
+        <button type="submit"><i class="fas fa-search"></i></button>
+    <input type="text" placeholder="Search...">
+      </div>
+    </form>
+    <ul>
+      <li><a href="#">Accueil</a></li>
+      <li><a href="#">À propos</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</div>
+        <img src="https://barryportal.com/wp-content/uploads/2024/02/unnamed-2.png" alt="Logo" class="logo">
+        <div class="btnHead">
+          <button class="subscribe-btn1"><i class="fa-solid fa-user"></i></button>
+          <button class="signup-btn">Sign Up</button>
+        </div>
+      </div>
+  <div class="prec">
+    <div class="ar"> <img src="icon/arrow.png" alt=""></div>
+    <h1 class="title">Newsletter & Email</h1>
+    </div>
+    <div class="desc">
+        <p>
+            Welcome to the <span class="colored"> "Worldcrunch Today" </span> newsletter! Get daily updates on all the latest news of the day, carefully curated to keep you informed about the most important events around the world. Don't miss out on any crucial information and stay up-to-date with Worldcrunch Today!
+        </p>
+    </div>
+  <div class="contenu">
+    
+    <div class="mail">
+      <form action="">
+        <input type="email" class="email-input" placeholder="Enter your email..." required>
+        <button type="submit" class="subscribe-btn">Subscribe</button>
+      </form>
+      
+      <div class="checkboxes">
+        <label><input type="checkbox" name="agree" value="agree" required> I agree to the World crunch post's termes of service and privacy policy<span class="etl">*</span></label> <br><br>
+        <label><input type="checkbox" name="worldcrunch" value="worldcrunch"> Worldcrunch may use my email address to provide me occasional <br> special offers via email and though other plateforms . I can opt out at any time. </label>
+      </div>
+        <br><br> <br><br><br>
+    </div>
+  </div>
+  
+  </div>
+  <div class="mobile">
+    <div id="mc_embed_shell">
+  
+      <div id="mc_embed_signup">
+          <form action="https://worldcrunch.us2.list-manage.com/subscribe/post?u=bf931133a7ae98b961f49dd17&amp;id=2fa8faa2aa&amp;f_id=0003c2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate="">
+              <div id="mc_embed_signup_scroll">
+                  <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                  <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div><div class="mc-field-group input-group"><strong>Newsletters </strong><ul><li><input type="checkbox" name="group[48][2048]" id="mce-group[48]-48-0" value=""><label for="mce-group[48]-48-0">Worldcrunch Today</label></li><li><input type="checkbox" name="group[48][1]" id="mce-group[48]-48-1" value=""><label for="mce-group[48]-48-1">Worldcrunch Weekly</label></li><li><input type="checkbox" name="group[48][524288]" id="mce-group[48]-48-2" value=""><label for="mce-group[48]-48-2">LGBTQ+ International</label></li><li><input type="checkbox" name="group[48][16]" id="mce-group[48]-48-3" value=""><label for="mce-group[48]-48-3">Global Viewpoint</label></li><li><input type="checkbox" name="group[48][4]" id="mce-group[48]-48-4" value=""><label for="mce-group[48]-48-4">Global Biz &amp;amp; Innovation</label></li><li><input type="checkbox" name="group[48][8]" id="mce-group[48]-48-5" value=""><label for="mce-group[48]-48-5">Global Life</label></li><li><input type="checkbox" name="group[48][262144]" id="mce-group[48]-48-6" value=""><label for="mce-group[48]-48-6">Dottoré!</label></li><li><input type="checkbox" name="group[48][4096]" id="mce-group[48]-48-7" value=""><label for="mce-group[48]-48-7">Worldcrunch Communication</label></li><li><input type="checkbox" name="group[48][128]" id="mce-group[48]-48-8" value=""><label for="mce-group[48]-48-8">Eyes on the U.S.</label></li><li><input type="checkbox" name="group[48][1024]" id="mce-group[48]-48-9" value=""><label for="mce-group[48]-48-9">My Grand-Père`s World</label></li><li><input type="checkbox" name="group[48][2]" id="mce-group[48]-48-10" value=""><label for="mce-group[48]-48-10">This happened</label></li><li><input type="checkbox" name="group[48][1048576]" id="mce-group[48]-48-11" value=""><label for="mce-group[48]-48-11">Women's rights</label></li></ul></div>
+              <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display: none;"></div>
+                  <div class="response" id="mce-success-response" style="display: none;"></div>
+              </div><div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_bf931133a7ae98b961f49dd17_2fa8faa2aa" tabindex="-1" value=""></div><div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe"></div>
+          </div>
+      </form>
+      </div>
+      </div>
+      
+
+
+  </div>
+  <div class="desktop">
+  <!--Mon telephone début-->
+  <div class="prev">
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+  .telephone-mockup {
+    background-image: url('tel.png'); /* Assurez-vous que cette image a une zone transparente pour l'écran */
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 750px; /* Ajustez à la taille de votre image */
+    height: 680px; /* Ajustez à la taille de votre image */
+    z-index: 2; /* Le téléphone doit être au-dessus de l'écran */
+    float: right;
+  }
+  
+  .ecran-telephone {
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 10px;
+    top: 60px; /* Ajustez à la position de l'écran dans votre image */
+    left: 202px; /* Ajustez à la position de l'écran dans votre image */
+    width: 277px; /* Ajustez à la taille de l'écran dans votre image */
+    height: 558px; /* Ajustez à la taille de l'écran dans votre image */
+    overflow: auto;
+    z-index: 1; /* L'écran doit être derrière le téléphone */
+    float: right;
+      overflow-x: hidden; /* Empêche le défilement horizontal */
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+  
+      </style>
+  </head>
+  <body>
+      <div class="telephone-mockup" style="z-index: 2;">
+          <div class="ecran-telephone" style="z-index: 1;">
+            <!-- Ici, vous pouvez insérer votre iframe ou votre contenu scrollable -->
+           <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="previewstyle.css">
+    <style>
+      .header, .content-bloc, .img {
+      width: 85%;
+      margin: 0 auto; /* Centrer dans la page */
+  }
+  
+    </style>
+    <title>Preview</title>
+  </head>
+  <body>
+    <div class="header">
+      <img src="https://barryportal.com/wp-content/uploads/2024/02/unnamed-2.png" alt="Logo"  style="max-width: 70%; justify-content: center; align-items: center; margin-top: 10px;">
+    </div>
+    <div class="content-bloc">
+              <section class="s1">
+                  <div class="bloc1">
+                  <h1>👋 Γειά σου*</h1>
+                  <p>
+                      Welcome to Tuesday, where truce talks are accelerating in Cairo as fears rise in Rafah, former Thai leader Thaksin Shinawatra is set to be freed from jail and this year’s Super Bowl scores a ratings touchdown. Meanwhile, La Stampa features an exclusive report on the rediscovery of the original sketches of Paris’s architectural landmark the Centre Pompidou, which is about to undergo a major renovation.
+                  </br>
+                  </br>
+                      [*Yassou - Greek]
+                  </p>
+                  </div>
+                  <div class="img1">
+                      <img src="https://barryportal.com/wp-content/uploads/2024/02/unnamed-3.png" alt="" style="max-width: 100%;"> 
+                  </div>
+              </br>
+              </section>
+              <section class="s2">
+                  <div class="bloc2">
+                      <h2>💡 SPOTLIGHT</h2>
+                      <h1>Maduro makes a mockery of democracy — and Latin America's left goes along for the ride</h1>
+                      <p>
+                          With a sham court ruling, Venezuela's President Nicolás Maduro has paved the way for his unchallenged reelection as president this year, regardless of U.S. sanctions. This is happening as Latin America's leftist governments, notably Brazil, watch in silence, writes Marcelo Cantelmi in Argentine daily Clarín.
+  
+                          The brutality of Venezuela's socialist regime is usually a measure of its weakness. Seemingly as its prospects worsen, it has returned, instinctively, to the tried-and-tested formula of ruling by force.
+  
+                          It is how the so-called Bolivarian revolution has run Venezuela for 25 years. And its claims of being revolutionary and ruling for the people are merely to allow it the type of rights violations immediately pounced on should they occur in any right-wing regime. Like this last one: without a peep from anyone in Latin America, Venezuela's commissar-filled Supreme Court banned the government's chief opponents, notably the leading presidential aspirant María Corina Machado, from running for public office.
+  
+                          This was a crass reversal of the regime's earlier bid to ingratiate itself with the United States and give the economy a breather. A conditional agreement in October (to allow opponents to compete in elections) broadly alleviated U.S. sanctions, allowing business to pick up a little, before this return to the "Nicaraguan" path of brazen despotism. Here President Nicolás Maduro chose to heed the counsels of hardliners led by the deputy-head of the ruling party and captain in the Armed Forces, Diosdado Cabello.
+  
+                          The volte-face has been justified with the usual litany of claims on attempted coups and CIA plots to murder Maduro. It's the side dish in a familiar recipe.
+  
+                          The reason was the regime's sullen realism. It is the first time that elections could sweep away — or bring crashing down — the socialist edifice its ideologue, the late Hugo Chávez, began raising in 1999. The regime was already showing restlessness when it revived months ago a 19th century dispute over Esequibo, an oil-rich chunk of land inside neighboring Guyana. Threatening to march into the territory was a jingoistic ploy any troubled regime would try, especially as Venezuelans already believe Esequibo is 'rightly' part of their country.
+  
+                          Esequibo is a little like our drama with the Falkland Islands, which we call Malvinas, although Guyana became independent of Great Britain in 1966 and the land dispute is now with the International Court at The Hague. Perhaps it is more like Kuwait, the oil-drenched emirate Iraq's dictator Saddam Hussein briefly annexed in 1990. He was hoping, in vain, to solve Iraq's dismal economic conditions in one fell swoop. Likewise Maduro may envisage he could bankroll a Bolivarian renaissance with Esequibo's resources. Thanks to those, Guyana's economy grew 57.8% in 2022, and 29.2% in 2023. Thus he held a referendum on Dec. 3 wherein voters were asked to reaffirm this claim, though its chief result turned out to be their abstention.
+  
+                          Less than 10% of almost 21 million eligible voters voted that day, which is fewer than the disciplined opposition supporters who voted last June to make Machado the opposition's single candidate at the presidential elections due this year. The regime previously received a slap in the face in the 2022 local elections in the state of Barinas, Chávez's birth state, where the opposition won. Rather, two slaps: the Supreme Court annulled the results, ordered a repeat with other opposition candidates, and the opposition won again! [...]
+                          <br>
+                          <br>
+                          — Read the full article by Marcelo Cantelmi for Clarín, translated into English by Worldcrunch.
+                      </p>
+                      <div class="img2"><img src="https://barryportal.com/wp-content/uploads/2024/02/icon.png" alt="" style="max-width: 100%; justify-content: center; align-items: center; margin-top: 10px;"></div>
+                  </div>
+              </section>
+              <br>
+              <br>
+              <div class="ligne1"></div>
+              <section class="s3">
+                  <div class="bloc3">
+                      <h2>🗞️  FRONT PAGE</h2>
+                      <div class="img4">
+                          <img src="https://barryportal.com/wp-content/uploads/2024/02/unnamed-4.png" alt="" style="max-width: 100%; justify-content: center; align-items: center;"> 
+                      </div>
+                      <p>
+                          Tel Aviv-based daily Israel Hayom devotes its front page to the emotional reunion after two Israeli hostages were rescued yesterday in Rafah, in southern Gaza. Israel’s special counterterrorism unit managed to free Fernando Marman and Louis Har, who had been abducted from the Nir Yitzhak kibbutz when Hamas launched its Oct. 7 attack. This is the second time since the beginning of the war between Israel and Hamas that security forces have succeeded in rescuing living hostages from Gaza.
+                      </p>
+                      <div class="img2"><img src="https://barryportal.com/wp-content/uploads/2024/02/icon.png" alt=""></div>
+                  </div>
+              </section>
+              <br>
+              <br>
+              <div class="ligne1"></div>
+              <section class="s4">
+                  <div class="bloc4">
+                      <h2>🌎  7 THINGS TO KNOW RIGHT NOW</h2>
+                      <p>
+                          • Truce talks in Cairo as Rafah attacks intensify: U.S., Egyptian, Israeli and Qatari senior officials are expected to meet in Cairo on Tuesday for the latest round of discussions on a truce in Gaza as fear of an Israeli assault on Rafah, where more than a million civilians are sheltering, is growing. China urged Israel to stop its military operation “as soon as possible,” warning of a “serious humanitarian disaster,” while U.S. President Joe Biden said civilians there must be “protected.” <br>
+                          <br>
+  
+                          • U.S. Senate begins vote to pass Ukraine, Israel aid bill: The U.S. Senate started voting on an alternative bill to pass a $95.34 billion aid package for Ukraine, Israel and Taiwan, following criticism of House Speaker Mike Johnson which casted doubts about the future of the bill. The Republican speaker said the bill does not address the “most pressing” issue of security at the U.S.-Mexico border.<br>
+                          <br>
+                          • Russian puts Estonian Prime Minister Kaja Kallas on “wanted” list: Russian police have put Estonian Prime Minister Kaja Kallas, its state secretary and Lithuania's culture minister on the Interior Ministry’s register of people wanted in connection with criminal charges. It is the first time the Russian ministry has put a foreign leader on a wanted list. Kremlin spokesman Dmitry Peskov said Kallas is wanted for “desecration of historical memory.” Meanwhile, Estonia's Foreign Intelligence Service warned on Tuesday that Moscow is preparing for a military confrontation with the West within the next decade.<br>
+                          <br>
+                          • Four Armenian soldiers killed by Azerbaijani fire amid peace talks: Armenia said on Tuesday that four of its soldiers were killed in a fire fight with Azeri forces on the two countries’ shared border, in the first fatal incident since they began negotiating a truce to end a 30-year conflict over the Nagorno-Karabakh region. The longtime Caucasian rivals accused one another of sparking the incident.<br>
+                          <br>
+                          • Indian police fire tear gas as protesting farmers march on Delhi: Police in northern India have fired tear gas in a bid to stop thousands of protesting farmers marching on New Delhi after talks with the government failed. The farmers are demanding greater support and guaranteed crop prices in a repeat of the 2020 protests, which saw protesters camping on the capital’s outskirts for more than a year.<br>
+                          <br>
+                          • Thailand’s jailed former Prime Minister Thaksin Shinawatra to be released: Former Thai prime minister Thaksin Shinawatra, who was sentenced for eight years for abuse of power before a royal pardon reduced the term to one year, was granted release on parole and will soon be freed. The controversial billionaire, twice elected premier and ousted in a 2006 military coup, had been sentenced just after he returned to Thailand from a 15-year self-imposed exile in August 2023.<br>
+                          <br>
+                          
+                          • UAE, Azerbaijan, Brazil to fight global warming jointly with climate “troika”: Past and future UN climate summit hosts the United Arab Emirates, Azerbaijan and Brazil announced on Tuesday they will form a “troika” aiming at pushing for an international agreement to limit global warming to 1.5 °C.<br>
+                          <br>
+                      </p>
+                      <div class="img2"><img src="https://barryportal.com/wp-content/uploads/2024/02/icon.png" alt=""></div>
+                  </div>
+              </section>
+              <br>
+              <br>
+              <div class="ligne1"></div>
+              <section class="s5">
+                  <div class="bloc5">
+                      <h2>#️⃣ BY THE NUMBERS</h2>
+                      <h2 class="t2">123.4 million</h2>
+                      <p>
+                          According to figures from CBS, which aired the game, Super Bowl LVIII was the most-watched television broadcast since the Apollo 11 Moon landing in 1969, with an estimated 123.4 million viewers. In addition to CBS, the game (which saw the Kansas City Chiefs defeat the San Francisco 49ers) could be watched on Paramount+ streaming platform, Univision, and Nickelodeon. Among the factors cited for the record: a thrilling overtime and U.S. pop icon Taylor Swift in attendance
+                          <br>
+                      </p>
+                      <div class="img2"><img src="https://barryportal.com/wp-content/uploads/2024/02/icon.png" alt=""></div>
+                  </div>
+              </section>
+              <br>
+              <br>
+              <div class="ligne1"></div>
+              <section class="s6">
+                  <div class="bloc6">
+                      <h2>📰 STORY OF THE DAY</h2>
+                      <h2>How the Centre Pompidou's original sketches were rediscovered — in a parking lot</h2>
+                      <p>
+                          In Turin-based daily La Stampa, Andrea Plebe reports on the discovery of four hundred tubes that tell the story of the architectural adventure of the making of the iconic post-modern Centre Pompidou, which is about to undergo a major renovation project as its 50th anniversary approaches.<br><br>
+  
+                          📄 "It was like entering Ali Baba's cave..." Boris Hamzeian, an architect and architectural history and theory scholar, was born in Sestri Levante, Italy, to a family of Iranian descent. But the mysterious "cave" in question was in Paris, hidden inside the parking lot next to the Centre Georges Pompidou. There were 400 tubes, containing the original drawings of the revolutionary project with which Renzo Piano, Richard Rogers and Gianfranco Franchini, then in their early 30s, submitted the winning bid to design and build an icon of 20th-century architecture.<br><br>
+  
+                          🏗️ The Beaubourg marks a watershed in the conception of museums: no longer courtly, intimidating buildings, the expression of a dusty, academic culture, but instead a center that aimed to be open to as many people as possible. A kind of cultural factory descended upon the center of the French capital, with its green, yellow, blue and white exterior tubes, plus red to indicate the paths and escalators on the main facade. Some people called it pejoratively at the time the "Notre Dame of tubes."<br><br>
+  
+                          🥇 The competition was announced in 1971, the inauguration was held on January 31, 1977 with the intervention of the President of the Republic, Valéry Giscard d'Estaing (Georges Pompidou, who conceived the idea and after whom the center is named, had died in 1974): 5,000 people were expected, 30,000 arrived. On July 15, 1971, when the name "Piano & Rogers" was read out by the chairman of the competition jury, Jean Prouvé, as the designated winners from among 681 proposals received from 41 countries around the world, no one had any idea who they were.<br><br>
+                          <br>
+                          
+                          ➡️ Read more on Worldcrunch.com
+                          <br>
+                      </p>
+                      <div class="img2"><img src="https://barryportal.com/wp-content/uploads/2024/02/icon.png" alt="" style="max-width: 100%; justify-content: center; align-items: center; margin-top: 10px;"></div>
+                  </div>
+              </section>
+              <br>
+              <br>
+              <div class="ligne1"></div>
+              <section class="s7">
+                  <div class="bloc7">
+                      <h2>📹 THIS HAPPENED VIDEO — TODAY IN HISTORY, IN ONE ICONIC PHOTO</h2>
+                      
+                      <div class="video1">
+                           <iframe width="180" height="115" src="https://www.youtube.com/embed/cE1YlPjgdXY?si=3N_AJVSp_FV4y4up" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                           
+                      </div>
+                      <h4>➡️ Watch the video: <a href="https://www.youtube.com/watch?v=cE1YlPjgdXY" class="tvideo" style="max-width: 100%; justify-content: center; align-items: center; margin-top: 10px;"> THIS HAPPENED</a></h4>
+                      <br>
+                      <br>
+                      <div class="img2"><img src="https://barryportal.com/wp-content/uploads/2024/02/icon.png" alt=""></div>
+                  </div>
+              </section>
+              <br>
+              <br>
+              <div class="ligne1"></div>
+              <section class="s8">
+                  <div class="bloc8">
+                      <h2>📣 VERBATIM</h2>
+                      <h3 class="italic1">“They need to be protected.”</h3>
+                      <p>
+                          — U.S. President Joe Biden said that Israel must make "credible" efforts to protect the civilians blocked in Rafah, whom he described as “exposed and vulnerable.” Biden’s comments come after Israel's Prime Minister Benjamin Netanyahu ordered troops to prepare to move into the southern city of Rafah, now home to an estimated one million Palestinians. President Biden called for the protection of Rafah civilians after meeting with Jordan's King Abdullah in Washington on Monday, stating that any major military operation in the city "should not proceed without a credible plan for ensuring the safety" of those living there. For more, read this recent article from die Welt, translated from German by Worldcrunch: What The U.S. Got Wrong In The Middle East — With Obama, Trump And Biden All To Blame.
+                      </p>
+                      <br>
+                      <br>
+                      <div class="img2"><img src="https://barryportal.com/wp-content/uploads/2024/02/icon.png" alt=""></div>
+                  </div>
+              </section>
+              <br>
+              <br>
+              <div class="ligne1"></div>
+              <section class="s9">
+                  <div class="bloc9">
+                      <h2>📸 PHOTO DU JOUR</h2>
+                      <div class="img5"><img src="https://barryportal.com/wp-content/uploads/2024/02/unnamed-1.jpg" alt="" style="max-width: 100%; justify-content: center; align-items: center; margin-top: 10px;"></div>
+                      <p>
+                          — U.S. President Joe Biden said that Israel must make "credible" efforts to protect the civilians blocked in Rafah, whom he described as “exposed and vulnerable.” Biden’s comments come after Israel's Prime Minister Benjamin Netanyahu ordered troops to prepare to move into the southern city of Rafah, now home to an estimated one million Palestinians. President Biden called for the protection of Rafah civilians after meeting with Jordan's King Abdullah in Washington on Monday, stating that any major military operation in the city "should not proceed without a credible plan for ensuring the safety" of those living there. For more, read this recent article from die Welt, translated from German by Worldcrunch: What The U.S. Got Wrong In The Middle East — With Obama, Trump And Biden All To Blame.
+                      </p>
+                      <br>
+                      <br>
+                      <div class="img2"><img src="https://barryportal.com/wp-content/uploads/2024/02/icon.png" alt=""></div>
+                  </div>
+              </section>
+              <br>
+              <br>
+              <div class="ligne1"></div>
+              <section class="s10">
+                  <div class="bloc10">
+                      <h2>👉 MORE FROM WORLDCRUNCH</h2>
+                      
+                      <p>
+                          • <a href="https://worldcrunch.com/focus-israel-palestine-war/rafah-flee-home?utm_source=Worldcrunch+Newsletters&utm_campaign=b22f48e169-EMAIL_CAMPAIGN_2024_02_13_12_33&utm_medium=email&utm_term=0_2fa8faa2aa-b22f48e169-%5BLIST_EMAIL_ID%5D" target="_blank">Two Burning Questions From Rafah: Where To Now? Where Is Home?</a> — WORLDCRUNCH<br><br>
+  
+                          • <a href="https://worldcrunch.com/focus/ukraine-russia-sudan?utm_source=Worldcrunch+Newsletters&utm_campaign=b22f48e169-EMAIL_CAMPAIGN_2024_02_13_12_33&utm_medium=email&utm_term=0_2fa8faa2aa-b22f48e169-%5BLIST_EMAIL_ID%5D" target="_blank">Is A New Frontline In The Ukraine-Russia War Opening </a> — In Sudan? — DIE WELT<br><br>
+                          
+                          • <a href="https://worldcrunch.com/world-affairs/prabowo-subianto-indonesia-election?utm_source=Worldcrunch+Newsletters&utm_campaign=b22f48e169-EMAIL_CAMPAIGN_2024_02_13_12_33&utm_medium=email&utm_term=0_2fa8faa2aa-b22f48e169-%5BLIST_EMAIL_ID%5D" target="_blank">Indonesian Elections: The Dark Reality Behind Subianto's "Cute Grandpa" Memes </a>— THE CONVERSATION
+                      </p>
+                      <br>
+                      <br>
+                      <div class="img2"><img src="https://barryportal.com/wp-content/uploads/2024/02/icon.png" alt="" style="max-width: 100%; justify-content: center; align-items: center; margin-top: 10px;"></div>
+                  </div>
+              </section>
+              <br><br>  
+              <footer>
+                  <div class="f1">
+                      <p>
+                          ✍️ Newsletter by Anne-Sophie Goninet and Agnese Tonghini
+                          <br><br>
+  
+                          Let us know what’s happening in your corner of the world!
+                          <br>
+                          
+                      </p>
+                      <p><a href="mailto:info@worldcrunch.com">info@worldcrunch.com</a></p>
+                      <h2>Not already subscribed?</h2>
+                      <H3>👉 <a href="https://mailchi.mp/worldcrunch.com/sign-up-to-worldcrunch-today?utm_source=Worldcrunch+Newsletters&utm_campaign=b22f48e169-EMAIL_CAMPAIGN_2024_02_13_12_33&utm_medium=email&utm_term=0_2fa8faa2aa-b22f48e169-%5BLIST_EMAIL_ID%5D" target="_blank">Sign up now</a></H3>
+                  <br> <br>
+                  <p class="small">Copyright © 2024 Worldcrunch, All rights reserved. <br>
+                      You are receiving this email because you subscribed to a newsletter at Worldcrunch.com.<br>
+                      Our mailing address is:<br>
+                      Worldcrunch<br>
+                      70, rue Amelot<br>
+                      Paris 75011<br>
+                      France<br>
+                      </p>
+                  </div>
+              </footer>
+    </div>
+    </div>
+    </div>
+  </div>   
+  
+
+   <!--Mon telephone début-->
+  <div>
+      <br><br>
+    <div class="footer">
+        <br><br>
+        <div class="titTopN">
+        <h1>Others Newsletters</h1><br>
+        </div>
+        
+        <div class="checkboxing">
+            <input type="checkbox" id="selectAll" onchange="toggleSelectAll()" onclick="openPopup()">
+            <label for="selectAll">Select All</label>
+            <div class="line">
+          
+            </div>
+
+          </div>
+            <section>
+              <div class="container">
+                <div class="Bloc1">
+                  <div class="photo">
+                    <img src="https://barryportal.com/wp-content/uploads/2023/09/Tel_Mockup_Logo.png" alt="Photo">
+                    <div class="text-overlay">
+                      <h3>Newsletter's Title</h3>
+                      <div class="frequency"><i class="fa-solid fa-calendar-days"></i>Frequency</div>
+                    </div>
+                  </div>
+                   <div class="content">
+                    <h2 class="title">Subtitle</h2>
+                    <p class="description">Newsletter's description. Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                    <div class="buttons">
+                      <a href="Preview.html" class="button" id="previewButton1" target="_blank"><i class="fa-solid fa-eye"></i> Preview</a>
+                      <button class="button" id="btn1" onclick="openPopup()"><i class="fa-regular fa-heart"></i> Select</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="Bloc2">
+                  <div class="photo">
+                    <img src="https://barryportal.com/wp-content/uploads/2023/09/Tel_Mockup_Logo.png" alt="Photo">
+                    <div class="text-overlay">
+                      <h3>Newsletter's Title</h3>
+                      <div class="frequency"><i class="fa-solid fa-calendar-days"></i>Frequency</div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <h2 class="title">Subtitle</h2>
+                    <p class="description">Newsletter's description. Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                    <div class="buttons">
+                      <a href="PreviewWtHpn.html" class="button" id="previewButton2" target="_blank"><i class="fa-solid fa-eye"></i> Preview</a>
+                      <button class="button" id="btn2" onclick="openPopup()" ><i class="fa-regular fa-heart"></i> Select</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="container">
+                <div class="Bloc3">
+                  <div class="photo">
+                    <img src="https://barryportal.com/wp-content/uploads/2023/09/Tel_Mockup_Logo.png" alt="Photo">
+                    <div class="text-overlay">
+                      <h3>Newsletter's Title</h3>
+                      <div class="frequency"><i class="fa-solid fa-calendar-days"></i>Frequency</div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <h2 class="title">Subtitle</h2>
+                    <p class="description">Newsletter's description. Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                    <div class="buttons">
+                      <a href="Preview.html" class="button" id="previewButton3" target="_blank"><i class="fa-solid fa-eye"></i> Preview</a>
+                      <button class="button" id="btn3" onclick="openPopup()"><i class="fa-regular fa-heart"></i> Select</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="container">
+                <div class="Bloc4">
+                  <div class="photo">
+                    <img src="https://barryportal.com/wp-content/uploads/2023/09/Tel_Mockup_Logo.png" alt="Photo">
+                    <div class="text-overlay">
+                      <h3>Newsletter's Title</h3>
+                      <div class="frequency"><i class="fa-solid fa-calendar-days"></i>Frequency</div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <h2 class="title">Subtitle</h2>
+                    <p class="description">Newsletter's description. Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                    <div class="buttons">
+                      <a href="Preview.html" class="button" id="previewButton4" target="_blank"><i class="fa-solid fa-eye"></i> Preview</a>
+                      <button class="button" id="btn4" onclick="openPopup()"><i class="fa-regular fa-heart"></i> Select</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
+            <div class="popup-container" id="popupContainer">
+              <div class="popup-content">
+                <!-- Icône de fermeture -->
+            <div class="popup-close" onclick="closePopup()">
+              <i class="fas fa-times"></i>
+          </div>
+                <!-- Image -->
+                <img src="https://barryportal.com/wp-content/uploads/2024/02/unnamed-2.png" alt="Votre image" class="popup-image">
+            
+                <!-- Champ Email -->
+                <input type="email" placeholder="Enter your email..." class="email-input2">
+
+                <!-- Cases à cocher pour les mentions légales -->
+                <div class="checkboxes">
+                  <label><input type="checkbox" name="agree" value="agree" required>I agree to the terms of service and privacy policy<span class="etl">*</span></label> <br><br>
+                  <label><input type="checkbox" name="receiveOffers" value="receiveOffers">I want to receive special offers via email</label>
+                </div> <br>
+
+                <!-- Bouton d'abonnement -->
+                <button onclick="subscribe()" class="subscribe-btn">Subscribe</button>
+            
+                
+              </div>
+            </div>
+          </div>
+            <script>
+              // Fonction pour changer l'icône sur les blocs lors du clic sur le bouton de prévisualisation
+              //Bloc 1
+          document.getElementById('previewButton1').addEventListener('click', function() {
+            var icon = document.querySelector('.button#previewButton1 i');
+            icon.classList.toggle('fa-eye-slash');
+            icon.classList.toggle('fa-eye');
+          });
+          
+              //Bloc 2
+          document.getElementById('previewButton2').addEventListener('click', function() {
+            var icon = document.querySelector('.button#previewButton2 i');
+            icon.classList.toggle('fa-eye-slash');
+            icon.classList.toggle('fa-eye');
+          });
+          
+                //Bloc 3
+          document.getElementById('previewButton3').addEventListener('click', function() {
+            var icon = document.querySelector('.button#previewButton3 i');
+            icon.classList.toggle('fa-eye-slash');
+            icon.classList.toggle('fa-eye');
+          });
+          
+                //Bloc 4
+                document.getElementById('previewButton4').addEventListener('click', function() {
+            var icon = document.querySelector('.button#previewButton4 i');
+            icon.classList.toggle('fa-eye-slash');
+            icon.classList.toggle('fa-eye');
+          });
+          
+          // Fonction pour changer la couleur, l'icône et le texte lors du clic sur le bouton "Select" pour le bloc 1
+          document.getElementById('btn1').addEventListener('click', function() {
+            var button = document.getElementById('btn1');
+            button.classList.toggle('selected');
+            var icon = button.querySelector('i');
+            icon.classList.toggle('fa-heart');
+            icon.classList.toggle('fa-solid');
+            if (button.classList.contains('selected')) {
+              button.innerHTML = '<i class="fa-solid fa-heart"></i> Selected';
+              button.style.backgroundColor = '#28a745'; // Ajoute la couleur verte
+            } else {
+              button.innerHTML = '<i class="fa-regular fa-heart"></i> Select';
+              button.style.backgroundColor = ''; // Réinitialise la couleur
+            }
+          });
+          
+          // Fonction pour changer la couleur, l'icône et le texte lors du clic sur le bouton "Select" pour le bloc 2
+          document.getElementById('btn2').addEventListener('click', function() {
+            var button = document.getElementById('btn2');
+            button.classList.toggle('selected');
+            var icon = button.querySelector('i');
+            icon.classList.toggle('fa-heart');
+            icon.classList.toggle('fa-solid');
+            if (button.classList.contains('selected')) {
+              button.innerHTML = '<i class="fa-solid fa-heart"></i> Selected';
+              button.style.backgroundColor = '#28a745'; // Ajoute la couleur verte
+            } else {
+              button.innerHTML = '<i class="fa-regular fa-heart"></i> Select';
+              button.style.backgroundColor = ''; // Réinitialise la couleur
+            }
+          });
+          
+          // Fonction pour changer la couleur, l'icône et le texte lors du clic sur le bouton "Select" pour le bloc 3
+          document.getElementById('btn3').addEventListener('click', function() {
+            var button = document.getElementById('btn3');
+            button.classList.toggle('selected');
+            var icon = button.querySelector('i');
+            icon.classList.toggle('fa-heart');
+            icon.classList.toggle('fa-solid');
+            if (button.classList.contains('selected')) {
+              button.innerHTML = '<i class="fa-solid fa-heart"></i> Selected';
+              button.style.backgroundColor = '#28a745'; // Ajoute la couleur verte
+            } else {
+              button.innerHTML = '<i class="fa-regular fa-heart"></i> Select';
+              button.style.backgroundColor = ''; // Réinitialise la couleur
+            }
+          });
+          
+          // Fonction pour changer la couleur, l'icône et le texte lors du clic sur le bouton "Select" pour le bloc 
+          document.getElementById('btn4').addEventListener('click', function() {
+            var button = document.getElementById('btn4');
+            button.classList.toggle('selected');
+            var icon = button.querySelector('i');
+            icon.classList.toggle('fa-heart');
+            icon.classList.toggle('fa-solid');
+            if (button.classList.contains('selected')) {
+              button.innerHTML = '<i class="fa-solid fa-heart"></i> Selected';
+              button.style.backgroundColor = '#28a745'; // Ajoute la couleur verte
+            } else {
+              button.innerHTML = '<i class="fa-regular fa-heart"></i> Select';
+              button.style.backgroundColor = ''; // Réinitialise la couleur
+            }
+          });
+          
+           // Fonction pour changer l'état de tous les boutons "Select" en fonction de l'état du checkbox
+           function toggleSelectAll() {
+                var checkboxes = document.querySelectorAll('.button[id^="btn"]');
+                var selectAllCheckbox = document.getElementById('selectAll');
+                
+                checkboxes.forEach(function(checkbox) {
+                  checkbox.classList.toggle('selected', selectAllCheckbox.checked);
+                  var icon = checkbox.querySelector('i');
+                  icon.classList.toggle('fa-heart', selectAllCheckbox.checked);
+                  icon.classList.toggle('fa-solid', selectAllCheckbox.checked);
+          
+                  if (selectAllCheckbox.checked) {
+                    checkbox.innerHTML = '<i class="fa-solid fa-heart"></i> Selected';
+                    checkbox.style.backgroundColor = '#28a745';
+                  } else {
+                    checkbox.innerHTML = '<i class="fa-regular fa-heart"></i> Select';
+                    checkbox.style.backgroundColor = '';
+                  }
+                });
+              }
+          
+              // Écouteur d'événement pour le changement d'état du checkbox
+              document.getElementById('selectAll').addEventListener('change', toggleSelectAll);
+              //Menu
+              function showMenu() {
+  var menuItems = document.getElementById("menuItems");
+  menuItems.style.display = "block";
+}
+
+function hideMenu() {
+  var menuItems = document.getElementById("menuItems");
+  menuItems.style.display = "none";
+}    
+//Pop Up
+function openPopup() {
+    var popup = document.getElementById("popupContainer");
+    popup.style.display = "block";
+  }
+
+  // Fonction pour gérer l'abonnement
+  function subscribe() {
+    var emailInput = document.querySelector(".email-input").value;
+    // Votre logique d'abonnement ici
+    alert("Subscribed successfully for email: " + emailInput);
+  }
+  // Fonction pour fermer le popup
+  function closePopup() {
+            var popup = document.getElementById("popupContainer");
+            popup.style.display = "none";}
+</script>
+
+</body>
+</html>

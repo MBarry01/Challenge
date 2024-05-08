@@ -1,0 +1,228 @@
+/* Styles pour rendre le contenu responsive */
+.container {
+  max-width: 305px;
+  padding: 5px;
+  margin: 13px;
+  box-sizing: border-box;
+  border: 1px solid #ccc; /* Bordure solide de 1px avec couleur grise */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  justify-content: center;
+  background-color: #fff;
+  margin-top: 15px;
+}
+
+.container:hover {
+  transform: scale(1.01); /* Légèrement agrandir le conteneur lorsqu'il est survolé */
+}
+
+.photo {
+  width: 100%;
+  text-align: center;
+  padding: 0px;
+  position: relative; 
+}
+.photo img {
+  max-width: 100%;
+  height: auto;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+  margin-left: 9px;
+}
+.button {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+@media screen and (max-width: 600px) {
+  /* Styles pour les écrans plus petits */
+  .buttons {
+    flex-direction: column;
+  }
+  .button {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+/* Styles de base pour les boutons */
+.button {
+  background-color: #E45D31; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  border: none; /* Pas de bordure */
+  border-radius: 5px; /* Rayon de bordure */
+  padding: 10px 20px; /* Espacement du texte à l'intérieur du bouton */
+  cursor: pointer; /* Curseur personnalisé */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Animation de transition pour la couleur de fond et du texte */
+}
+
+/* Styles spécifiques au bouton Preview */
+.button:hover {
+  background-color: #195996; /* Couleur de fond plus foncée lors du survol */
+}
+
+.button i {
+  margin-right: 5px; /* Ajoutez de l'espace entre l'icône et le texte */
+}
+#previewButton2{
+  text-decoration: none;
+  text-align: center;
+}
+#previewButton3{
+  text-decoration: none;
+  text-align: center;
+}
+#previewButton4{
+  text-decoration: none;
+  text-align: center;
+}
+#previewButton1{
+  text-decoration: none;
+  text-align: center;
+}
+#btn2:hover {
+  background-color: #28a745; /* Couleur de fond verte lors du survol */
+}
+
+#btn1:hover {
+  background-color: #28a745; /* Couleur de fond verte lors du survol */
+}
+#btn3:hover {
+  background-color: #28a745; /* Couleur de fond verte lors du survol */
+}
+#btn4:hover {
+  background-color: #28a745; /* Couleur de fond verte lors du survol */
+}
+.text-overlay {
+  opacity: 0;
+  position: absolute; /* Positionnement absolu pour superposer le texte sur l'image */
+  bottom: 0; /* Aligner l'overlay au bas de l'image */
+  left: 0;
+  width: 100%;
+  height: 0; /* Hauteur initiale de 0 */
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  color: #fff; /* Couleur du texte */
+  margin-top: 150px;
+  padding: 20px; /* Ajoutez du padding pour le texte */
+  box-sizing: border-box; /* Incluez le padding dans la taille */
+  transition: height 0.3s ease, opacity 0.3s ease; /* Animation de transition pour la hauteur et l'opacité */
+  overflow: hidden; /* Cache le contenu qui dépasse */
+}
+
+.container:hover .text-overlay {
+  height: 100%; /* Hauteur de l'overlay à 100% pour afficher le contenu */
+  opacity: 1; /* Afficher l'overlay */
+}
+
+.photo:hover .text-overlay {
+  opacity: 1;
+}
+
+
+/* Style pour afficher .text-overlay sur les dispositifs autres que les ordinateurs */
+@media only screen and (max-width: 768px) {
+  .container:hover .text-overlay {
+    display: block; /* Affiche .text-overlay sur hover pour les dispositifs autres que les ordinateurs */
+  }
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0; /* Réinitialisez le padding de l'image */
+}
+.frequency {
+  top: 156px; /* Déplace frequency vers le haut */
+  
+  left: 25px;
+  color: #fff; /* Couleur du texte */
+  padding: 5px 5px 10px; /* Ajoutez du padding pour le texte */
+}
+.frequency i {
+  margin-right: 5px; /* Ajoutez de l'espace entre l'icône et le texte */
+}
+
+
+section{
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.checkboxing {
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-top: 15px;
+ 
+}
+
+.checkboxing input[type="checkbox"] {
+  display: none;
+}
+
+.checkboxing label {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+.checkboxing label:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.checkboxing input[type="checkbox"]:checked + label:before {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.checkboxing label:after {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 12px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 9%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.checkboxing input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+
+.checkboxing input[type="checkbox"]:checked + label:after {
+  opacity: 1; /* Affiche l'icône lorsque la case est cochée */
+}
+.line {
+  border-top: 1px solid #ccc; /* Couleur et style de la ligne */
+  margin-top: 5px; /* Espacement au-dessus de la ligne */
+  margin-bottom: 5px; /* Espacement en dessous de la ligne */
+}
+h2 {
+  padding-left: 10px;
+}
+p{
+  padding-left: 10px;
+}
+
+
+
